@@ -1,0 +1,12 @@
+python train.py --seed 5 --charged_satisfaction_alpha 0.0 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 0.0 --runtag figure_4b;
+python train.py --seed 5 --charged_satisfaction_alpha 0.1 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 0.1 --runtag figure_4b;
+python train.py --seed 5 --charged_satisfaction_alpha 1.0 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 1.0 --runtag figure_4b;
+python train.py --seed 5 --charged_satisfaction_alpha 10.0 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 10.0 --runtag figure_4b;
+python train.py --seed 5 --charged_satisfaction_alpha 100.0 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 100.0 --runtag figure_4b;
+python train.py --seed 5 --charged_satisfaction_alpha 250.0 --runtag figure_4b;
+python train.py --seed 6 --charged_satisfaction_alpha 250.0 --runtag figure_4b;

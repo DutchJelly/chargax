@@ -1,0 +1,9 @@
+python train.py --seed 5 --arrival_frequency low --runtag figure_4a;
+python train.py --seed 6 --arrival_frequency low --runtag figure_4a;
+python train.py --seed 7 --arrival_frequency low --runtag figure_4a;
+python train.py --seed 5 --arrival_frequency medium --runtag figure_4a;
+python train.py --seed 6 --arrival_frequency medium --runtag figure_4a;
+python train.py --seed 7 --arrival_frequency medium --runtag figure_4a;
+python train.py --seed 5 --arrival_frequency high --runtag figure_4a;
+python train.py --seed 6 --arrival_frequency high --runtag figure_4a;
+python train.py --seed 7 --arrival_frequency high --runtag figure_4a;
