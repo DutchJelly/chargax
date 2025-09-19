@@ -41,7 +41,7 @@ def eval_func(train_state, rng):
     return runner_state[-1], infos
 
 def log_info(info):
-    wandb.init(project="chargax", entity="FelixAndKoen", tags=["eval"])
+    wandb.init(project="chargax reproducing", entity="dutchjelly-leiden-university", tags=["eval"])
 
     def split_array_into_dict_of_singles(log_item):
         if isinstance(log_item, chex.Array) and log_item.size > 1:
@@ -161,8 +161,8 @@ if __name__ == "__main__":
 
     argument_parser = argparse.ArgumentParser()
     argument_parser.add_argument("--seed", type=int, default=42)
-    argument_parser.add_argument("--user_profiles", type=str, choices=["highway", "residential", "workplace", "shopping"], required=True)
-    argument_parser.add_argument("--arrival_frequency", type=str, choices=["low", "medium", "high"], required=True)
+    argument_parser.add_argument("--user_profiles", type=str, choices=["highway", "residential", "workplace", "shopping"], default="shopping")
+    argument_parser.add_argument("--arrival_frequency", type=str, choices=["low", "medium", "high"], default="medium")
     argument_parser.add_argument("--groupname", type=str, default=None)
     argument_parser.add_argument("--runtag", type=str, default=None)
     argument_parser.add_argument("--car_profiles", type=str, default="eu")
@@ -231,7 +231,7 @@ if __name__ == "__main__":
     env_parameters_str = "_".join([f"{k}_{v}" for k, v in env_parameters.items()])
     groupname = f"{groupname}_{env_parameters_str}"
     c_time = time.time()
-    wandb.init(project="chargax", entity="FelixAndKoen", config=merged_config, group=groupname, tags=[args.runtag], dir="/var/scratch/kponse/wandb")
+    wandb.init(project="chargax reproducing", entity="dutchjelly-leiden-university", config=merged_config, group=groupname, tags=[args.runtag], dir="/var/scratch/kponse/wandb")
     trained_runner_state, train_rewards = random_trainer_train_fn()
     print("Training finished")
     print(f"Training took {time.time() - c_time:.2f} seconds")
